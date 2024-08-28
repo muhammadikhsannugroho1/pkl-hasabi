@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\KelasReq;
 use App\Models\Kelas;
 use Illuminate\Http\Request;
+use App\Services\HttpClientService;
 
 class KelasController extends Controller
 {

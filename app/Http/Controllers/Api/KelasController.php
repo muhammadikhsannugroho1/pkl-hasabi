@@ -19,6 +19,9 @@ use Illuminate\Support\Facades\Validator;
 //import facade Storage
 use Illuminate\Support\Facades\Storage;
 
+use Illuminate\Support\Facades\Http;
+
+
 class KelasController extends Controller
 {
     /**
@@ -28,11 +31,10 @@ class KelasController extends Controller
      */
     public function index()
     {
-        //get all posts
-        $Kelas = Kelas::latest()->paginate(5);
+        $pembayaran = Kelas::latest()->paginate(5);
+        return new KelasResource(true, 'List Data Pembayaran', $pembayaran);
+        
 
-        //return collection of posts as a resource
-        return new KelasResource(true, 'List Data Kelas', $Kelas);
     }
 
     /**

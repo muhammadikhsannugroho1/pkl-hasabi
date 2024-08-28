@@ -65,3 +65,76 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 "# pkl-hasabi" 
+
+
+## deskripsi aplikasi
+# Nama Web
+web pembayaran sekolah
+## Deskripsi Web
+sebuah web yang bisa menyimpan data data atau menambahkan data,untuk siswa pembayaran spp 
+
+## Fitur
+   **kelas**
+- [Fitur 1: membuat data nama kelas dan membuat data kompetensi keahlian ]
+- [Fitur 2: menghapus data nama kelas dan membuat data kompetensi keahlian ]
+- [Fitur 3: update data nama kelas dan membuat data kompetensi keahlian ]
+- [Fitur 5: menampilkan data nama kelas dan membuat data kompetensi keahlia]
+
+**spp**
+- [Fitur 1: membuat data tahun dan membuat data nominal]
+- [Fitur 2: menghapus data data tahun dan membuat data nominal ]
+- [Fitur 3: update data data tahun dan membuat data nominal ]
+- [Fitur 5: menampilkan data tahun dan membuat data nominal]
+
+**siswa**
+- [Fitur 1: membuat data nisn,data tanggal bayar,data bulan bayar,data tahun bayar,data id spp,data jumlah bayar]
+- [Fitur 2: menghapus data nisn,data tanggal bayar,data bulan bayar,data tahun bayar,data id spp,data jumlah bayar ]
+- [Fitur 3: update data nisn,data tanggal bayar,data bulan bayar,data tahun bayar,data id spp,data jumlah bayar ]
+- [Fitur 5: menampilkan data nisn,data tanggal bayar,data bulan bayar,data tahun bayar,data id spp,data jumlah bayar]
+
+**pembayaran**
+- [Fitur 1: membuat data nisn,data tanggal bayar,data bulan bayar,data tahun bayar,data id spp,data jumlah bayar]
+- [Fitur 2: menghapus data nisn,data tanggal bayar,data bulan bayar,data tahun bayar,data id spp,data jumlah bayar ]
+- [Fitur 3: update data nisn,data tanggal bayar,data bulan bayar,data tahun bayar,data id spp,data jumlah bayar ]
+- [Fitur 5: menampilkan data nisn,data tanggal bayar,data bulan bayar,data tahun bayar,data id spp,data jumlah bayar]
+
+
+## Teknologi yang Digunakan
+
+### Framework
+- Laravel [11.9]
+
+### Bahasa Pemrograman
+- PHP [8.3.10]
+
+### Database
+- MySQL [3.3.0]
+
+
+## cara instal
+-postman    
+1. instal postman di browser
+2. Setelah instalasi selesai, buka aplikasi Postman dari menu Start (Windows), folder Aplikasi (macOS), atau aplikasi launcher (Linux).
+3. Buat akun baru atau masuk dengan akun Postman Anda untuk memanfaatkan fitur kolaborasi dan penyimpanan cloud.
+4. Mulai Menggunakan Postman
+
+-laragon
+1. Kunjungi browser dan unduh versi terbaru dari installer.
+2. Jalankan file installer yang diunduh dan ikuti petunjuk di layar untuk menyelesaikan instalasi.
+3. Setelah instalasi selesai, buka Laragon dari menu Start atau shortcut desktop
+4. Laragon menyediakan antarmuka pengguna grafis untuk mengonfigurasi server web, database, dan versi PHP. Sesuaikan pengaturan sesuai kebutuhan proyek Anda.
+5. Tambahkan proyek web ke folder `www` Laragon untuk mulai mengembangkan aplikasi Anda. Anda dapat mengakses proyek Anda melalui `http://localhost/nama-proyek`.
+
+-visual studio code
+1. Kunjungi browser dan unduh installer yang sesuai untuk sistem operasi Anda (Windows, macOS, atau Linux).
+2. Jalankan file installer yang diunduh dan ikuti petunjuk di layar untuk menyelesaikan instalasi.
+3. Setelah instalasi selesai, buka VS Code dari menu Start (Windows), folder Aplikasi (macOS), atau aplikasi launcher (Linux).
+4. Anda dapat menambahkan ekstensi dari marketplace VS Code untuk mendukung bahasa pemrograman dan alat pengembangan tambahan yang Anda perlukan.
+5. Buka folder proyek, mulai menulis kode, dan gunakan fitur VS Code untuk meningkatkan produktivitas Anda.
+
+## Cara Buka Web
+cukup serching di halama url di gogle 
+1. *Clone repository ini:*
+   ```bash
+   git clone https://github.com/hasby09/pklhasabi.git
+

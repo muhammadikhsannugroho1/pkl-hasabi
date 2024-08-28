@@ -7,6 +7,7 @@ use App\Http\Controllers\PembayaranController;
 use App\Http\Controllers\SppController;
 use App\Http\Controllers\SiswaController;
 use app\models\siswa;
+use App\Http\Controllers\ApiKelasController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -25,7 +26,7 @@ Route::delete('/post/{id}', [PostController::class, 'destroy'])->name('posts.des
 Route::group(['prefix' => 'kelas', 'as' => 'kelas.'], function () {
     Route::get('/', [KelasController::class, 'index'])->name('index');
     Route::get('/create', [KelasController::class, 'create'])->name('create');
-    Route::post('/', [KelasController::class, 'store'])->name('store');
+    Route::post('/store', [KelasController::class, 'store'])->name('store');
     Route::get('/{id_kelas}', [KelasController::class, 'show'])->name('show');
     Route::get('/{id_kelas}/edit', [KelasController::class, 'edit'])->name('edit');
     Route::put('/{id_kelas}', [KelasController::class, 'update'])->name('update');
@@ -66,3 +67,14 @@ Route::group(['prefix' => 'pembayaran', 'as' => 'pembayaran.'], function () {
     Route::delete('/{id_pembayaran}', [PembayaranController::class, 'destroy'])->name('destroy');
     Route::patch('/{id_pembayaran}/restore', [PembayaranController::class, 'restore'])->name('restore');
 });
+
+//kelas api
+
+Route::get('/dashboard/kelas', [\App\Http\Controllers\ApiKelasController::class, 'index']);
+Route::get('/creat', [\App\Http\Controllers\ApiKelasController::class, 'create']);
+Route::put('/update', [\App\Http\Controllers\ApiKelasController::class, 'update']);
+Route::put('/show', [\App\Http\Controllers\ApiKelasController::class, 'show']);
+
+
+
+
