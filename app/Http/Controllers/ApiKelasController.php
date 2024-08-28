@@ -24,34 +24,53 @@ class ApiKelasController extends Controller
         $kelas=json_decode($response->body());
         $data['kelas']=$kelas->data->data;
       
-        return view('index.kelas',$data);
+        return view('KelasApi.index',$data);
 
     }
 
     public function create(){
 
         try{
-            $response=Http::post('localhost:8001/api/kelas/store');
+            $response=Http::get('localhost:8001/api/kelas');
             $kelas=json_decode($response->body());
-            $data['kelas']=$kelas->data->data;
-            dd($kelas);
-            return view('create.kelas',$data);
+            $data['kelas']=$kelas?->data?->data;
+           
+            return view('KelasApi.create',$data);
+
     
         }catch(\Exception $e){
             return $e;
         }
     }
 
-    public function update(){
-        $response=Http::put('localhost:8001/api/kelas/update');
-        $kelas=json_decode($response->body());
-        $data['kelas']=$kelas->data->data;
-        return view('update.kelas',$data);
+    public function store(Request $request){
+        $input = $request->input();
+        try{
+            $response=Http::get('localhost:8001/api/kelas',$input);
+            $kelas=json_decode($response->body());
+            $data['kelas']=$kelas?->data;
+            return redirect(route('index'));;
+        }catch(\Exception $a){
+            return $a;
+            // dd($e);
+
+        }       
     }
+    public function edit($id_kelas){
+        try{
+            $response=Http::get('localhost:8001/api/kelas/',$id_kelas);
+            $kelas=json_decode($response->body());
+            $data['kelas']=$kelas?->data->data; 
+            return view('KelasApi.edit',$data);
+            //dd($e);
+        }catch(\Exception $u){
+            return $u;
+            // dd($e);
+        }
+    }
+}
 
    
 
 
     
-
-}

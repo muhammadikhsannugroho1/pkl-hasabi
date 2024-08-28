@@ -1,26 +1,28 @@
 <?php
 
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\KelasController;
 use App\Http\Controllers\PembayaranController;
-use App\Http\Controllers\SppController;
 use App\Http\Controllers\SiswaController;
 use app\models\siswa;
 use App\Http\Controllers\ApiKelasController;
+use App\Http\Controllers\ApiSppController;
+use App\Http\Controllers\SppController;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
 // Route untuk PostController
-Route::get('/post', [PostController::class, 'index'])->name('posts.index');
-Route::get('/post/create', [PostController::class, 'create'])->name('posts.create');
-Route::post('/post', [PostController::class, 'store'])->name('posts.store');
-Route::get('/post/{id}', [PostController::class, 'show'])->name('posts.show');
-Route::get('/post/{id}/edit', [PostController::class, 'edit'])->name('posts.edit');
-Route::put('/post/{id}', [PostController::class, 'update'])->name('posts.update');
-Route::delete('/post/{id}', [PostController::class, 'destroy'])->name('posts.destroy');
+// Route::get('/post', [PostController::class, 'index'])->name('posts.index');
+// Route::get('/post/create', [PostController::class, 'create'])->name('posts.create');
+// Route::post('/post', [PostController::class, 'store'])->name('posts.store');
+// Route::get('/post/{id}', [PostController::class, 'show'])->name('posts.show');
+// Route::get('/post/{id}/edit', [PostController::class, 'edit'])->name('posts.edit');
+// Route::put('/post/{id}', [PostController::class, 'update'])->name('posts.update');
+// Route::delete('/post/{id}', [PostController::class, 'destroy'])->name('posts.destroy');
 
 // Route untuk KelasController
 Route::group(['prefix' => 'kelas', 'as' => 'kelas.'], function () {
@@ -68,13 +70,15 @@ Route::group(['prefix' => 'pembayaran', 'as' => 'pembayaran.'], function () {
     Route::patch('/{id_pembayaran}/restore', [PembayaranController::class, 'restore'])->name('restore');
 });
 
-//kelas api
+//rote kelas api
+Route::get('/dashboard/kelas', [\App\Http\Controllers\ApiKelasController::class, 'index'])->name('index');
+Route::get('/dashboard/kelas/create', [\App\Http\Controllers\ApiKelasController::class, 'create'])->name('create');
+Route::get('/dashboard/kelas/store', [\App\Http\Controllers\ApiKelasController::class, 'store'])->name('store');
+Route::get('/dashboard/kelas/edit/{id_kelas}', [\App\Http\Controllers\ApiKelasController::class, 'edit'])->name('edit');
 
-Route::get('/dashboard/kelas', [\App\Http\Controllers\ApiKelasController::class, 'index']);
-Route::get('/creat', [\App\Http\Controllers\ApiKelasController::class, 'create']);
-Route::put('/update', [\App\Http\Controllers\ApiKelasController::class, 'update']);
-Route::put('/show', [\App\Http\Controllers\ApiKelasController::class, 'show']);
-
+//rote spp api
+Route::get('/dashboard/spp', [\App\Http\Controllers\ApiSppController::class, 'index'])->name('index');
+Route::get('/dashboard/spp/create', [\App\Http\Controllers\ApiSppController::class, 'create'])->name('create');
 
 
 

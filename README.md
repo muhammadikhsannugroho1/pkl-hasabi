@@ -136,5 +136,5 @@ sebuah web yang bisa menyimpan data data atau menambahkan data,untuk siswa pemba
 cukup serching di halama url di gogle 
 1. *Clone repository ini:*
    ```bash
-   git clone https://github.com/hasby09/pklhasabi.git
+   git clone https://github.com/muhammadikhsannugroho1/pkl-hasabi.git
 
